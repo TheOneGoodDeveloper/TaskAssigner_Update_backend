@@ -117,7 +117,8 @@ const port = 4001;
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({ origin: "*", methods: ["GET", "POST", "PUT", "DELETE"], credentials: true }));
+
+app.use(cors({ origin: "*" }));
 
 // Static files
 const __filename = fileURLToPath(import.meta.url);
